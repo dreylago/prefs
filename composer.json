@@ -1,6 +1,6 @@
 {
-    "name": "drey/prefs-yii",
-    "description": "Bridge package  for drey/prefs and Yii framework",
+    "name": "drey/prefs-common",
+    "description": "user preferences common files",
     "license": "MIT",
     "type": "library",
     "authors": [
