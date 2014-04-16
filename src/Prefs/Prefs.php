@@ -1,7 +1,7 @@
 <?php
 
-namespace drey\Prefs;
-use drey\PrefsBridge\FwBridge;
+namespace Prefs;
+use PrefsBridge\FwBridge;
 
 
 class Prefs {

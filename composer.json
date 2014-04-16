@@ -13,9 +13,8 @@
     "require": {
           "php": ">=5.3.0"
     },
-    "autoload": {
-        "psr-0": {
-            "drey": "src/"
-        }
+    "repositories": {
+            "type": "vcs",
+            "url": "https://github.com/dreylago/prefs-common"
     }
 }

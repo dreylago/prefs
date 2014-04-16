@@ -1,7 +1,6 @@
 <?php
 
-namespace drey\Prefs\Storage;
-use drey\PrefsBridge\FwBridge;
+namespace Prefs\Storage;
 
 /**
  * Description of File
