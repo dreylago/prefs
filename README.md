@@ -1,4 +1,4 @@
-# Prefs
+# Prefs-common
 
 Store and retrieve user preferences.
 
