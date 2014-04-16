@@ -3,6 +3,5 @@ CREATE TABLE `prefs` (
   `value` varchar(255) NOT NULL,
   `username` varchar(32) NOT NULL,
   PRIMARY KEY (`name`,`username`),
-  KEY `k_username` (`username`)
+  KEY `prefs_username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-|

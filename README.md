@@ -7,7 +7,7 @@ Common files.
 
 ## Usage
 
-You need a bridge package to use or test this package.  
+You need a bridge package to use or test this package (such as prefs-yii).  
 
 
 
