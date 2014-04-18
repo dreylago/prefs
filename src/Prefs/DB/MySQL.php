@@ -1,6 +1,6 @@
 <?php
 
-namespace Prefs\Storage;
+namespace Prefs\DB;
 use PrefsBridge\FwBridge;
 
 
