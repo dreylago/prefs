@@ -23,29 +23,31 @@ install or test this package.
 
 
 ```php
-    use drey\Prefs\Storage\File;
+    use drey\Prefs\DB\FileSystem;
     use drey\Prefs\Prefs;
 
     # filesystem storage
-    $storage = new File('/path/to/dir');
+    $storage = new FileSystem('/path/to/dir');
 
     # init prefs object
     $prefs = new Prefs($storage);
 
     # set preference "color" for current user
     $prefs->set('color','red');
-
+    # (...)
     # get color preference of current user, with 'blue' as default
     $color = $prefs->get('color','blue');
+    #
+    # color is set to 'red'
 ```
 
 ### Store preferences in a table
 
-We can change the storage medium accordingly.
+Change the storage medium accordingly.
 
 ```php
 
-    use drey\Prefs\Storage\MySQL;
+    use drey\Prefs\DB\MySQL;
     use drey\Prefs\Prefs;
 
     # DB storage (MySQL), table_name is optional, defaults to 'prefs'
@@ -55,6 +57,7 @@ We can change the storage medium accordingly.
     $prefs = new Prefs($storage);
 
     $prefs->set('fruit','lemmon');
+    # (...)
     $fruit = $prefs->get('fruit','pear');
 ```
 
@@ -86,12 +89,12 @@ users must agree on the fake username.
 
 ```php
     # one user, maybe an administrator
-    $prefs->set('last_closing_date',$form->closing_date,'*');
+    $prefs->set('closing_date',$form->closing_date,'*');
 
     (...)
 
     # remaining users
-    $closing_date = $prefs->get('last_closing_date',date('Y-m-d'),'*');
+    $closing_date = $prefs->get('closing_date',date('Y-m-d'),'*');
    
  
 ```
