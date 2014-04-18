@@ -105,12 +105,12 @@ We can populate fields if the related model has not any value and
 it is a new record.
 
 ```php
-    # in the view
+    # before showing the form
     if ($model->isNewRecord && !$model->date) {
         $model->date = $prefs->get('invoice_date',date('Y-m-d'));
     }
 
-    # in the controller
+    # after post ...
     if (post) {
         $prefs->set('invoice_date',$model->date);
     }
