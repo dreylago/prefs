@@ -1,9 +1,10 @@
 <?php
 
-use PrefsBridge\FwBridge;
+namespace drey\Prefs;
+use drey\Prefs\FwBridge\User as FwBridge;
 
 class Prefs {
-	public db;
+	public $db;
 	public function __construct($db) {
 		$this->db = $db;
 	}

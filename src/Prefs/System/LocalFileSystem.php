@@ -1,6 +1,6 @@
 <?php
 
-namespace Prefs\System;
+namespace drey\Prefs\System;
 
 class LocalFileSystem {
 	

@@ -1,8 +1,8 @@
 <?php
 
-namespace Prefs\DB;
+namespace drey\Prefs\DB;
 
-use Prefs\System\LocalFileSystem;
+use drey\Prefs\System\LocalFileSystem;
 
 /**
  * Description of File
@@ -16,17 +16,20 @@ class FileSystem {
 
 	function __construct($path, $system=NULL) {
 		$this->path = $path;
-		if ($storage=NULL) {
+		if ($storage==NULL) {
 			$this->system = new LocalFileSystem();
 		}
 	}
 	function sanitizeFn($str) {
 		$fn = preg_replace("/[^a-zA-Z0-9_-]+/i", "_", $str);
+		if (!preg_match("/\w{3}/",$fn)) {
+			$fn = sha1($str);
+		}
 		return $fn;
 	}
 	function _loadUserPrefs($username) {
 		$fn = $this->sanitizeFn($username) . '.json';
-		if ($this->system->file_exists("$this->path/$fn") && is_readable("$this->path/$fn")) {
+		if ($this->system->is_readable("$this->path/$fn")) {
 			$user_prefs = json_decode($this->system->file_get_contents("$this->path/$fn"),true);
 			return $user_prefs;
 		}

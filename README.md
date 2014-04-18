@@ -2,14 +2,13 @@
 
 Store and retrieve user preferences (common files).
 
-User preferences are persistent (key,value) pairs associated to
-each user of the system. Preferences are helpful in a variety
-of situations. One of them is to personalize the look and
-feel of a website. However, there are more important
-uses: repeat form fields initial values according
+1. personalize the look and
+feel of a website. 
+2. Remember form default values according
 to the last submit (for instance, repeat the date limits
 or the selection of an account in a dropdown 
 list, according to the last search).
+3. etc.
 
 **Prefs-common** is *framework agnostic*, but it needs a bridge to
 a framework to retrieve system information such as the current
@@ -19,7 +18,9 @@ You need a bridge package
 (such as **[prefs-yii](https://github.com/dreylago/prefs-yii)**) to 
 install or test this package.  
 
+
 ## Usage
+
 
 ```php
     use drey\Prefs\Storage\File;
