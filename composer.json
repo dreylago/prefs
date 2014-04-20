@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "drey\\": ["src/"]
+            "drey\\": ["src/", "test"]
         }
     }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true" convertNoticesToExceptions="true" 
+         convertWarningsToExceptions="true" 
+         stopOnError="true" 
+         stopOnFailure="true" 
+         stopOnIncomplete="true" 
+         stopOnSkipped="true" 
+         bootstrap="tests/Bootstrap.php">
+    <testsuites>
+        <testsuite name="Prefs">
+            <directory suffix="Test.php">tests/Prefs/Test</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
