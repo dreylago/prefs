@@ -9,12 +9,19 @@ use drey\Prefs\System\LocalFileSystem;
  *
  * @author drey
  */
-class FileSystem {
+class FileSystem implements PrefsDB {
 	//put your code here
 	public $path;
 	public $system;
 
-	function __construct($path, $system=NULL) {
+	/**
+	 * Initializes a FileSystem PrefsDB object
+	 * @param string $path Directory where the data
+	 * will be stored
+	 * @param FileSystemHandler $system handles calls to
+	 * the system
+	 */
+	function __construct($path, FileSystemHandler $system=NULL) {
 		$this->path = $path;
 		if ($system==NULL) {
 			$this->system = new LocalFileSystem();
@@ -47,7 +54,7 @@ class FileSystem {
 		if (isset($user_prefs[$name])) {
 			return (object) array('value'=>$user_prefs[$name]);
 		}
-		return (object) array('value'=>'');
+		return false;
 	}
 	function getAll($username) {
 		$all = $this->_loadUserPrefs($username);

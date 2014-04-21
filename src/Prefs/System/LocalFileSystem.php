@@ -2,7 +2,8 @@
 
 namespace drey\Prefs\System;
 
-class LocalFileSystem {
+
+class LocalFileSystem implements FileSystemHandler {
 	
 	function is_readable($fn) {
 		return \is_readable($fn);
