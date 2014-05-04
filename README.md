@@ -123,6 +123,8 @@ Best way is via [composer](https://getcomposer.org/)/[Packagist](https://packagi
         "drey/prefs-common": "dev-master"
     }
 }
+
+See [drey/prefs-common](https://packagist.org/packages/drey/prefs-common).
 ```
 
 
