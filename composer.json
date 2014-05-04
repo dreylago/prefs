@@ -1,6 +1,6 @@
 {
     "name": "drey/prefs",
-    "description": "user preferences common files",
+    "description": "Store and retrieve user preferences",
     "license": "MIT",
     "type": "library",
     "authors": [
