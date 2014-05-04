@@ -2,7 +2,7 @@
 
 namespace drey\Prefs;
 use drey\Prefs\DB\PrefsDB;
-use drey\Prefs\FwBridge\User as FwBridge;
+
 
 /**
  * Object the handles user preferences
@@ -95,7 +95,6 @@ class Prefs {
 			if (isset($this->username)) {
 				return $this->username;
 			}
-			return FwBridge::userid();
 		}
 		return $username;
 	}
