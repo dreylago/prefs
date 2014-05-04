@@ -124,7 +124,9 @@ Best way is via [composer](https://getcomposer.org/)/[Packagist](https://packagi
     }
 }
 
-See [drey/prefs](https://packagist.org/packages/drey/prefs).
 ```
+
+See [drey/prefs](https://packagist.org/packages/drey/prefs).
+
 
 
