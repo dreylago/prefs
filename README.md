@@ -20,9 +20,9 @@ list, according to the last search).
 
     $db = new FileSystem('/tmp');
     $prefs = new Prefs($db);
-    $prefs->setDefaultUsername('bob');
+    $prefs->setDefaultUsername('drey');
 
-    # set preference "color" for current user (bob)
+    # set preference "color" for current user (drey)
     $prefs->set('color','red');
     
     # get color preference of current user
