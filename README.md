@@ -112,19 +112,10 @@ We can populate fields if the related model has not any value and it is a new re
 ```
 
 
-## Install
+## Installing with composer
 
-Best way is via [composer](https://getcomposer.org/)/[Packagist](https://packagist.org/):
 
-``` json
-{
-    "minimum-stability" : "dev",
-    "require": {
-        "drey/prefs": "dev-master"
-    }
-}
-
-```
+The package exists in the packagist repository as `drey/prefs`.
 
 See [drey/prefs](https://packagist.org/packages/drey/prefs).
 
