@@ -114,6 +114,15 @@ We can populate fields if the related model has not any value and it is a new re
 
 ## Install
 
-Best way is via [composer](https://getcomposer.org/)/[Packagist](https://packagist.org/)
+Best way is via [composer](https://getcomposer.org/)/[Packagist](https://packagist.org/):
+
+``` json
+{
+    "minimum-stability" : "dev",
+    "require": {
+        "drey/prefs-common": "dev-master"
+    }
+}
+```
 
 
