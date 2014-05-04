@@ -56,4 +56,19 @@ class PrefsSuite extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals(3,count($all));
 
 	}
+
+	public function globalUsernameTests($prefs) {
+		$prefs->deleteAll('*');
+
+		$prefs->set('bird','canary','*');
+		$prefs->set('city','Maracay','*');
+		$prefs->set('fruit','pineapple','*');
+
+		$value = $prefs->get('fruit','pear','*');
+		$this->assertEquals($value,'pineapple');
+
+		$value = $prefs->get('country','Venezuela','*');
+		$this->assertEquals($value,'Venezuela');
+
+	}
 }

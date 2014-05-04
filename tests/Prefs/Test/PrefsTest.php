@@ -33,11 +33,13 @@ class PrefsTest extends PrefsSuite {
 		$prefs = new Prefs($db);
 		$this->basicTests($prefs);
 		$this->defaultUsernameTests($prefs);
+		$this->globalUsernameTests($prefs);
 
 		$db = new FileSystem('/tmp');
 		$prefs = new Prefs($db);
 		$this->basicTests($prefs);
 		$this->defaultUsernameTests($prefs);
+		$this->globalUsernameTests($prefs);
 
 	}
 
