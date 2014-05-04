@@ -75,7 +75,7 @@ To assign/read the preferences of other users:
 ```php
     $prefs->set('fruit','lemmon','bob');
 
-    $pref->get('fruit','pear','bob')
+    $prefs->get('fruit','pear','bob')
 ```
 
 ### Global preferences
