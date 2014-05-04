@@ -1,6 +1,6 @@
 # Prefs-common
 
-Store and retrieve user preferences (common files).
+Store and retrieve user preferences.
 
 1. Customize the look and
 feel of a website. 
