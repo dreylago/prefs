@@ -2,13 +2,13 @@
 
 Store and retrieve user preferences.
 
-1. Customize the look and
-feel of a website. 
-2. Remember form default values according
+1. Remember form default values according
 to the last submit (for instance, repeat the date limits
 or the selection of an account in a dropdown 
 list, according to the last search).
-3. etc.
+1. Customize the look and
+feel of a website. 
+1. etc.
 
 
 ## Usage
