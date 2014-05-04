@@ -1,5 +1,5 @@
 {
-    "name": "drey/prefs-common",
+    "name": "drey/prefs",
     "description": "user preferences common files",
     "license": "MIT",
     "type": "library",

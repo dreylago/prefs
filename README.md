@@ -1,4 +1,4 @@
-# Prefs-common
+# Prefs
 
 Store and retrieve user preferences.
 
@@ -55,7 +55,7 @@ Change the DB medium accordingly.
     # (...)
 ```
 
-The table schema for MySQL should be (see `prefs-common/sql`):
+The table schema for MySQL should be (see directory `sql/`):
 
 ```sql
         CREATE TABLE `prefs`  (
@@ -120,11 +120,11 @@ Best way is via [composer](https://getcomposer.org/)/[Packagist](https://packagi
 {
     "minimum-stability" : "dev",
     "require": {
-        "drey/prefs-common": "dev-master"
+        "drey/prefs": "dev-master"
     }
 }
 
-See [drey/prefs-common](https://packagist.org/packages/drey/prefs-common).
+See [drey/prefs](https://packagist.org/packages/drey/prefs).
 ```
 
 
