@@ -95,9 +95,12 @@ users must agree on the fake username.
  
 ```
 
-### Populate form fields (Yii):
+### Populate form fields:
 
-We can populate fields if the related model has not any value and it is a new record.
+We can populate fields if a field in our
+model has not any value and we are creating
+a new record.
+
 
 ```php
     # before showing the form get the last value entered
