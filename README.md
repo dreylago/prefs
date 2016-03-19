@@ -67,6 +67,8 @@ The table schema for MySQL should be (see directory `sql/`):
 
 ### Default values
 
+If key is not found, a default value can be provided.
+
 ```php
     $bird = $prefs->get('bird','eagle');
     
@@ -78,9 +80,9 @@ The table schema for MySQL should be (see directory `sql/`):
 To assign/read the preferences of other users:
 
 ```php
-    $prefs->set('fruit','lemmon','bob');
+    $prefs->set('fruit','lemmon','alice');
     # ...
-    $prefs->get('fruit','pear','bob')
+    $prefs->get('fruit','pear','alice')
 ```
 
 ### Global preferences
@@ -102,9 +104,8 @@ users must agree on the fake username (for instance '*').
 
 ### Populate form fields:
 
-We can populate fields if a field in our
-model has not any value and we are creating
-a new record.
+Populate fields with default values if a field in our
+model has not any value and we are creating a new record.
 
 
 ```php
