@@ -18,8 +18,8 @@ feel of a website.
 ```php
     use drey\Prefs\Factory;
 
-    # call factory object that
-    # sets database to file system and username
+    # Obtain a Prefs object
+    # with file system storage and username
     $prefs = Factory::fileSystem('/path/to/directory','bob') 
 
     # set preference "color" for current user (bob)
@@ -33,15 +33,16 @@ feel of a website.
 
 ### Database in a RDMB
 
-Change the DB medium accordingly.
+Change the DB medium accordingly, using a pdo factory.
 
 ```php
     use drey\Prefs\Factory;
 
+    # obtain a PDO object
     $pdo = myConnect();
 
-    # call factory object that
-    # sets database to PDO object and username
+    # Obtain a Prefs object
+    # with RDBM storage and username
     $prefs = Factory::pdo($pdo,'bob') 
  
     # set preference "color" for current user (bob)
@@ -72,7 +73,7 @@ If key is not found, a default value can be provided.
 ```php
     $bird = $prefs->get('bird','eagle');
     
-    # $bird if set to 'eagle' if key 'bird' not found
+    # $bird is set to 'eagle' if key 'bird' not found
 ```
 
 ### Specify preferences for other users
@@ -87,8 +88,7 @@ To assign/read the preferences of other users:
 
 ### Global preferences
 
-A fake username could be used to handle preferences for all users. All
-users must agree on the fake username (for instance '*').
+A global username could be used to handle preferences for all users. All users must agree on the global username (for instance '*').
 
 ```php
     # one user
