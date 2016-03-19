@@ -16,14 +16,13 @@ feel of a website.
 ### Database in file system
 
 ```php
-    use drey\Prefs\Prefs;
-    use drey\Prefs\DB\FileSystem;
+    use drey\Prefs\Factory;
 
-    $db = new FileSystem('/path/to/directory');
-    $prefs = new Prefs($db);
-    $prefs->setDefaultUsername('drey');
+    # call factory object that
+    # sets database to file system and username
+    $prefs = Factory::fileSystem('/path/to/directory','bob') 
 
-    # set preference "color" for current user (drey)
+    # set preference "color" for current user (bob)
     $prefs->set('color','red');
     
     # get color preference of current user
@@ -37,15 +36,21 @@ feel of a website.
 Change the DB medium accordingly.
 
 ```php
-    use drey\Prefs\Prefs;
-    use drey\Prefs\DB\PDOInstance;
+    use drey\Prefs\Factory;
 
     $pdo = myConnect();
-    $db = new PDOInstance($pdo);
-    $prefs = new Prefs($db);
-    $prefs->setDefaultUsername('bob');
 
-    # (...)
+    # call factory object that
+    # sets database to PDO object and username
+    $prefs = Factory::pdo($pdo,'bob') 
+ 
+    # set preference "color" for current user (bob)
+    $prefs->set('color','red');
+    
+    # get color preference of current user
+    $color = $prefs->get('color');
+    
+    # $color is set to 'red'
 ```
 
 The table schema for MySQL should be (see directory `sql/`):
@@ -74,14 +79,14 @@ To assign/read the preferences of other users:
 
 ```php
     $prefs->set('fruit','lemmon','bob');
-
+    # ...
     $prefs->get('fruit','pear','bob')
 ```
 
 ### Global preferences
 
 A fake username could be used to handle preferences for all users. All
-users must agree on the fake username.
+users must agree on the fake username (for instance '*').
 
 ```php
     # one user

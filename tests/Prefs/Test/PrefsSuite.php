@@ -4,6 +4,17 @@ namespace drey\Prefs\Test;
 
 class PrefsSuite extends \PHPUnit_Framework_TestCase {
 
+	public function connect() {
+		try {
+    			$conn = new \PDO('mysql:host=localhost;dbname=test', 'testuser', '123456');
+    			$conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+    			return $conn;
+		} catch(PDOException $e) {
+    		echo 'ERROR: ' . $e->getMessage();
+		}
+		return NULL;
+	}
+
 	public function basicTests($prefs) {
 		$prefs->deleteAll('drey');
 		$prefs->deleteAll('jim');

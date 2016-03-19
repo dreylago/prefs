@@ -11,4 +11,10 @@ class FactoryTest extends PrefsSuite  {
 		$this->basicTests($prefs);
 	}
 
+	public function test2() {
+		$pdo = $this->connect();
+		$prefs = Factory::pdo($pdo,'bob');
+		$this->basicTests($prefs);
+	}
+
 }

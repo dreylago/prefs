@@ -4,6 +4,7 @@ namespace drey\Prefs;
 
 use drey\Prefs\Prefs;
 use drey\Prefs\DB\FileSystem;
+use drey\Prefs\DB\PDOInstance;
 
 
 /**
@@ -19,6 +20,19 @@ class Factory {
 	 */
 	static public function fileSystem($path, $username) {
 		$db = new FileSystem($path);
+    	$prefs = new Prefs($db);
+    	$prefs->setDefaultUsername($username);
+    	return $prefs;
+	}
+
+	/**
+	 * returns a pdo based object
+	 * @param  object $pdo      pdo object
+	 * @param  string $username 
+	 * @return object: pdo-based object
+	 */
+	static public function pdo($pdo, $username) {
+    	$db = new PDOInstance($pdo);
     	$prefs = new Prefs($db);
     	$prefs->setDefaultUsername($username);
     	return $prefs;
