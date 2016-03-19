@@ -124,7 +124,7 @@ model has not any value and we are creating a new record.
 ## Installing with composer
 
 
-The package exists in the packagist repository as `drey/prefs`.
+The package exists in Packagist repository as `drey/prefs`.
 
 See [drey/prefs](https://packagist.org/packages/drey/prefs).
 
