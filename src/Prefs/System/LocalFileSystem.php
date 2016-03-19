@@ -20,7 +20,7 @@ class LocalFileSystem implements FileSystemHandler {
 			fclose($fh);
 			return $data;
 		} else {
-			throw new Exception("could not get shared lock for $fn", 1);
+			throw new \Exception("could not get shared lock for $fn", 1);
 		}
 		return '';
 	}
@@ -33,7 +33,7 @@ class LocalFileSystem implements FileSystemHandler {
 			fclose($fh);
 			return $count;
 		} else {
-			throw new Exception("could not get exclusive lock for $fn", 1);
+			throw new \Exception("could not get exclusive lock for $fn", 1);
 		}
 		return 0;
 	}
