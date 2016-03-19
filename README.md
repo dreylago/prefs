@@ -13,12 +13,13 @@ feel of a website.
 
 ## Usage
 
+### Database in file system
 
 ```php
     use drey\Prefs\Prefs;
     use drey\Prefs\DB\FileSystem;
 
-    $db = new FileSystem('/tmp');
+    $db = new FileSystem('/path/to/directory');
     $prefs = new Prefs($db);
     $prefs->setDefaultUsername('drey');
 
@@ -31,15 +32,7 @@ feel of a website.
     # $color is set to 'red'
 ```
 
-### Default values
-
-```php
-    $bird = $prefs->get('bird','eagle');
-    
-    # $bird if set to 'eagle' if key 'bird' not found
-```
-
-### Store preferences in a table
+### Database in a RDMB
 
 Change the DB medium accordingly.
 
@@ -67,6 +60,13 @@ The table schema for MySQL should be (see directory `sql/`):
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
+### Default values
+
+```php
+    $bird = $prefs->get('bird','eagle');
+    
+    # $bird if set to 'eagle' if key 'bird' not found
+```
 
 ### Specify preferences for other users
 
